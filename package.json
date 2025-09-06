@@ -21,7 +21,7 @@
   "scripts": {
     "build:cjs": "bunx tsgo -p tsconfig.cjs.json",
     "build:esm": "bunx tsgo -p tsconfig.esm.json",
-    "build:bun": "bun run scripts/build-bun.ts"
+    "build:bun": "bun run ./scripts/bunBuilder.ts"
   },
   "contributors": [
     {
