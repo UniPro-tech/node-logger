@@ -1,11 +1,17 @@
 {
-  "name": "@unipro-tech/bun-logger",
+  "name": "@unipro-tech/node-logger",
   "module": "index.ts",
   "type": "module",
+  "version": "0.1.0",
+  "description": "A structured logger for Node.js using Pino.",
   "devDependencies": {
     "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "dependencies": {
+    "pino": "^9.9.4",
+    "pino-abstract-transport": "^2.0.0"
   }
 }
