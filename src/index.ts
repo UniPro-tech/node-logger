@@ -15,32 +15,32 @@ export class Logger {
     options: pino.LoggerOptions = {},
     level?: string
   ) {
-    this.baseLogger = pino({
-      timestamp: () => `,"timestamp":"${new Date().toISOString()}"`,
-      base: {
-        service: name,
-        environment: process.env.NODE_ENV || "production",
-      },
-      formatters: {
-        level: (label: string) => {
-          return {
-            level: label,
-          };
+    this.baseLogger = pino(
+      {
+        timestamp: () => `,"timestamp":"${new Date().toISOString()}"`,
+        base: {
+          service: name,
+          environment: process.env.NODE_ENV || "production",
+        },
+        formatters: {
+          level: (label: string) => {
+            return { level: label };
+          },
         },
       },
-      transport: {
-        level: level
-          ? level
-          : process.env.NODE_ENV === "production"
-          ? "info"
-          : "trace",
+      pino.transport({
         targets: transportTargets,
         options: {
           errorKey: "error",
           ...options,
         },
-      },
-    });
+        level: level
+          ? level
+          : process.env.NODE_ENV === "production"
+          ? "info"
+          : "trace",
+      })
+    );
   }
   getLogger(
     context: LogContext = { trace_id: nanoid(), request_id: nanoid() },
