@@ -1,9 +1,22 @@
 {
   "name": "@unipro-tech/node-logger",
-  "module": "index.ts",
-  "type": "module",
   "version": "0.2.0",
   "description": "A structured logger for Node.js using Pino.",
+  "type": "module",
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.cjs",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "private": false,
   "scripts": {
     "build": "bunx tsgo -p tsconfig.esm.json && bunx tsgo -p tsconfig.cjs.json"
   },
