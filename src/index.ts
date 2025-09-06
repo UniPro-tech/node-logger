@@ -1,3 +1,4 @@
+import { nanoid } from "nanoid";
 import pino, {
   type TransportPipelineOptions,
   type TransportTargetOptions,
@@ -34,9 +35,21 @@ export class Logger {
       },
     });
   }
-  getLogger(context = {}): pino.Logger {
-    return this.baseLogger.child(context);
+  getLogger(
+    context: LogContext = { trace_id: nanoid(), request_id: nanoid() },
+    extraContext: Record<string, any> = {}
+  ): pino.Logger {
+    if (!context.trace_id) {
+      context.trace_id = nanoid();
+    }
+    if (!context.request_id) {
+      context.request_id = nanoid();
+    }
+    const mergedContext = { ...context, ...extraContext };
+    return this.baseLogger.child(mergedContext);
   }
 }
+
+type LogContext = { trace_id: string; request_id: string };
 
 export { default as Transporter } from "./Transporter";
