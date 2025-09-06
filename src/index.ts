@@ -44,7 +44,7 @@ export class Logger {
   }
   getLogger(
     context: LogContext = { trace_id: nanoid(), request_id: nanoid() },
-    extraContext: Record<string, any> = {}
+    extraContext?: Record<string, any>
   ): pino.Logger {
     if (!context.trace_id) {
       context.trace_id = nanoid();
