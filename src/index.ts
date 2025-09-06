@@ -13,6 +13,7 @@ export const Logger = (
   options: pino.LoggerOptions = {}
 ) =>
   pino({
+    timestamp: pino.stdTimeFunctions.isoTime,
     transport: {
       targets: transportTargets,
       options: {
@@ -22,7 +23,7 @@ export const Logger = (
           : process.env.NODE_ENV === "development"
           ? "trace"
           : "info",
-        timestamp: pino.stdTimeFunctions.isoTime,
+
         errorKey: "error",
         ...options,
       },
