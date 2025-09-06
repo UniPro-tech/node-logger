@@ -8,7 +8,7 @@
   "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
-      "bun": "",
+      "bun": "./dist/bun/index.js",
       "import": "./dist/esm/index.js",
       "require": "./dist/cjs/index.cjs",
       "types": "./dist/types/index.d.ts"
