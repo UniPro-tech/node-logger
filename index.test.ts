@@ -1,8 +1,7 @@
 import { Logger, Transporter } from "./dist/bun";
 
-const logger = Logger("MyApp", [
-  Transporter.PinoPrettyTransporter(),
-  Transporter.FileTransporter("./app.log"),
-]);
+const logSystem = new Logger("test", [Transporter.ConsoleTransporter()]);
 
-logger.info({ service: "agenda" }, "Agenda connected to database.");
+const logger = logSystem.getLogger({ module: "index.test" });
+
+logger.trace("Hello, world!");
