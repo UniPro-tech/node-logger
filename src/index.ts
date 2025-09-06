@@ -28,12 +28,12 @@ export class Logger {
           };
         },
       },
-      level: level
-        ? level
-        : process.env.NODE_ENV === "production"
-        ? "info"
-        : "trace",
       transport: {
+        level: level
+          ? level
+          : process.env.NODE_ENV === "production"
+          ? "info"
+          : "trace",
         targets: transportTargets,
         options: {
           errorKey: "error",
