@@ -21,6 +21,13 @@ export class Logger {
         service: name,
         environment: process.env.NODE_ENV || "production",
       },
+      formatters: {
+        level: (label: string) => {
+          return {
+            level: label,
+          };
+        },
+      },
       level: level
         ? level
         : process.env.NODE_ENV === "production"
