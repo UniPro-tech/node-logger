@@ -4,8 +4,18 @@
   "type": "module",
   "version": "0.2.0",
   "description": "A structured logger for Node.js using Pino.",
+  "scripts": {
+    "build": "bunx tsgo -p tsconfig.esm.json && bunx tsgo -p tsconfig.cjs.json"
+  },
+  "contributors": [
+    {
+      "name": "Yuito Akatsuki",
+      "email": "yuito@uniproject.jp"
+    }
+  ],
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@typescript/native-preview": "^7.0.0-dev.20250904.1"
   },
   "peerDependencies": {
     "typescript": "^5"

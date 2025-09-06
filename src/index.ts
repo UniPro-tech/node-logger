@@ -3,8 +3,6 @@ import pino, {
   type TransportTargetOptions,
 } from "pino";
 
-import transporter from "./Transporter";
-
 export const Logger = (
   name: string,
   transportTargets: readonly (
@@ -31,9 +29,4 @@ export const Logger = (
     },
   });
 
-export const Transporter = transporter;
-
-export default {
-  Transporter,
-  Logger,
-};
+export { default as Transporter } from "./Transporter";
