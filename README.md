@@ -6,9 +6,6 @@ Grafana Loki で構造化ロギングを効率よく収集するために、UniP
 
 詳しくは、そのうち書く Wiki を参照。
 
-> [!WARNING]
-> Bun では pino の仕様上バンドルしないと動かないので、@unipro-tech/bun-logger を使用してください。
-
 ## How to use
 
 1. インストールする
