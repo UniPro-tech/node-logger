@@ -2,7 +2,9 @@
   "files": [
     "**/*.ts",
     "**/*.md",
-    "tsconfig.json",
+    "tsconfig.*.json",
+    "CODEOWNERS",
+    ".github/**",
     "!**/*.test.ts",
     "!**/__test__"
   ],
