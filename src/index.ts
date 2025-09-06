@@ -50,6 +50,12 @@ export class Logger {
   }
 }
 
-type LogContext = { trace_id: string; request_id: string; user_id?: string };
+type LogContext = {
+  trace_id: string;
+  request_id: string;
+  user_id?: string;
+  function?: string;
+  stack_trace?: string;
+};
 
 export { default as Transporter } from "./Transporter";
