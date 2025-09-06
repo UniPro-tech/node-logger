@@ -57,7 +57,7 @@ export class Logger {
   }
 }
 
-type LogContext = {
+export type LogContext = {
   trace_id?: string;
   request_id?: string;
   user_id?: string;
