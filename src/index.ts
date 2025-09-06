@@ -22,7 +22,7 @@ export const Logger = (
           : process.env.NODE_ENV === "development"
           ? "trace"
           : "info",
-        timestamp: () => `,"time":"${new Date().toUTCString()}"`,
+        timestamp: pino.stdTimeFunctions.isoTime,
         errorKey: "error",
         ...options,
       },
