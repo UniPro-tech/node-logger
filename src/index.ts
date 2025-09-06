@@ -45,7 +45,7 @@ export class Logger {
     if (!context.request_id) {
       context.request_id = nanoid();
     }
-    const mergedContext = { ...context, ...extraContext };
+    const mergedContext = { ...context, context: extraContext };
     return this.baseLogger.child(mergedContext);
   }
 }
