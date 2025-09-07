@@ -17,7 +17,7 @@ export class Logger {
   ) {
     this.baseLogger = pino(
       {
-        timestamp: () => `,"timestamp":"${new Date().toISOString()}"`,
+        timestamp: () => `,"time":"${new Date().toISOString()}"`,
         base: {
           service: name,
           environment: process.env.NODE_ENV || "production",
