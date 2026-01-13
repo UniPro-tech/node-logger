@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "nanoid": "^5.1.5",
-    "pino": "^9.9.4",
+    "pino": "^10.0.0",
     "pino-abstract-transport": "^2.0.0",
     "pino-discord-webhook": "^0.1.7",
     "pino-logfmt": "^1.0.1",
