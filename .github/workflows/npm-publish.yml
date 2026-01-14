@@ -37,4 +37,4 @@ jobs:
       - run: bun run --bun build:esm
       - run: bun run --bun build:bun
 
-      - run: npm publish --access public --provenance
+      - run: npm publish --access public
