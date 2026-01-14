@@ -1,6 +1,6 @@
 {
   "name": "@unipro-tech/node-logger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A structured logger for Node.js using Pino.",
   "type": "module",
   "main": "./dist/cjs/index.cjs",
