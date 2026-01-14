@@ -11,6 +11,8 @@ on:
 
 permissions:
   contents: read
+  id-token: write
+  packages: write
 
 jobs:
   build:
@@ -36,5 +38,3 @@ jobs:
       - run: bun run --bun build:bun
 
       - run: bun publish --access public --provenance
-        env:
-          NPM_CONFIG_TOKEN: ${{secrets.npm_token}}
