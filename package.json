@@ -41,7 +41,7 @@
   "dependencies": {
     "nanoid": "^5.1.5",
     "pino": "^10.0.0",
-    "pino-abstract-transport": "^2.0.0",
+    "pino-abstract-transport": "^3.0.0",
     "pino-discord-webhook": "^0.1.7",
     "pino-logfmt": "^1.0.1",
     "pino-loki": "^3.0.0",
