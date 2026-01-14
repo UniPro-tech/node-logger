@@ -18,6 +18,10 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UniPro-tech/node-logger.git"
+  },
   "private": false,
   "scripts": {
     "build:cjs": "bunx tsgo -p tsconfig.cjs.json",
